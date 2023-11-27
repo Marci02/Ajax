@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <button id="fetch-posts">Bejelentkezés</button>
+    <div id="post-list-container"></div>
+    <h1>Alap AJAX hívások</h1>
+    <ul>
+        <li>
+            A let xhttp = new XMLHttpRequest(); - Új kérés (XMLHttpRequest) objektum létrehozása.
+        </li>
+        <li>
+            A xhttp.onreadystatechange = function() - Ha változik a kérés (XMLHttpRequest) állapota, meghívódik a függvény (function).
+        </li>
+        <li>
+            A xhttp.readyState == 4 - Lezajlott a kérés, és megérkezett a válasz.
+        </li>
+        <li>
+            A xhttp.status == 200 - Létezik a kért objektum (fájl). Ha nem létezik, a status értéke 404 (Page not found).
+        </li>
+        <li>
+            A xhttp.responseText - A válasz szöveges tartalma.
+        </li>
+        <li>
+            A xhttp.open("GET", "aj_01.txt", true); - A kérés összeállítása (metódus, url, aszinkron)
+            <ul>
+                <li>- metódus: GET vagy POST </li>
+                <li>- url: a fájl megadása (útvonallal)</li>
+                <li>- aszinkron: true vagy false</li>
+            </ul>
+        </li>
+        <li>
+            A xhttp.send(); - A kérés elküldése.
+        </li>
+        <li>
+            Ha a válaszként kapott szövegben formázó utasítások vannak, feldolgozásra kerülnek megjelenítéskor!
+        </li>
+    </ul>
+
+
+    <img src="request.jpg" alt="">
+
+
+    <!-- 
+        <button id="fetch-posts">Posztok lekérése</button>
+
+-->
+
+    <script src="gyakscript1.js"></script>
+</body>
+
+</html>
